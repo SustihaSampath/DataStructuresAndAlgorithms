@@ -3,15 +3,15 @@ package org.sustiha.binarysearchtree;
 /**
  * Created by sustihashreesampath on 3/5/18.
  */
-public class Node {
+public class AvlNode {
 
     private int data;
-    private Node parent;
-    private Node left;
-    private Node right;
+    private AvlNode parent;
+    private AvlNode left;
+    private AvlNode right;
     private int height;
 
-    public Node(int data,Node parent, Node left, Node right,int height) {
+    public AvlNode(int data, AvlNode parent, AvlNode left, AvlNode right,int height) {
         this.data = data;
         this.parent=parent;
         this.left = left;
@@ -23,11 +23,11 @@ public class Node {
         return data;
     }
 
-    public Node getLeft() {
+    public AvlNode getLeft() {
         return left;
     }
 
-    public Node getRight() {
+    public AvlNode getRight() {
         return right;
     }
 
@@ -35,27 +35,21 @@ public class Node {
         this.data = data;
     }
 
-    public void setLeft(Node left) {
+    public void setLeft(AvlNode left) {
         this.left = left;
     }
 
-    public void setRight(Node right) {
+    public void setRight(AvlNode right) {
         this.right = right;
     }
 
-    public Node getParent() {
+    public AvlNode getParent() {
         return parent;
     }
 
-    public void setParent(Node parent) {
+    public void setParent(AvlNode parent) {
         this.parent = parent;
     }
 
-    public int getHeight() {
-        return height;
-    }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
 }

@@ -10,7 +10,6 @@ public class BstAction {
     public void insert(int data)
     {
 
-        Node node1  = new Node();
         if(root == null)
         {
             root = new Node(data,null,null,null);
@@ -18,22 +17,14 @@ public class BstAction {
         else
         {
             Node node = find(data,root);
-            node1.setData(data);
             if(node.getData() > data)
             {
-               node1.setParent(node);
-               node.setLeft(node1);
-
+               node.setLeft(new Node(data,node,null,null));
             }
             else
             {
-                node1.setParent(node);
-                node.setRight(node1);
-
+                node.setRight(new Node(data,node,null,null));
             }
-
-
-
         }
     }
 
@@ -45,15 +36,13 @@ public class BstAction {
         else if(data > node.getData()) {
             if(node.getRight() != null)
                 return find(data, node.getRight());
-            else
-                return node;
+            return node;
         }
         else
         {
             if(node.getLeft() != null)
-             return find(data,node.getLeft());
-            else
-                return node;
+                 return find(data,node.getLeft());
+            return node;
         }
 
 
@@ -84,6 +73,7 @@ public class BstAction {
 
     }
 
+
     protected Node getRoot()
     {
         return root;
@@ -92,15 +82,8 @@ public class BstAction {
 
     protected void delete(int data)
     {
-
+        Node node = FindNext.next(data,root);
     }
 
-    /*protected Node next(int data)
-    {
-        if(data > root)
-        {
 
-        }
-        return root;
-    }*/
 }

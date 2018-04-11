@@ -15,9 +15,28 @@ public class QueueAction {
     protected void enqueue(int data)
     {
         queue[writeIndex] = data;
-        writeIndex++;
+        if(queue.length == writeIndex)
+        {
+            writeIndex = 0;
+        }
+        else
+            writeIndex++;
 
     }
 
 
+    protected int dequeue()
+    {
+        int element = queue[readIndex];
+        readIndex++;
+        return element;
+    }
+
+    protected void printQueue()
+    {
+        for(int element:queue)
+        {
+            System.out.println(element);
+        }
+    }
 }
