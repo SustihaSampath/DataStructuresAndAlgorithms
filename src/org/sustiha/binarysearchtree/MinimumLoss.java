@@ -30,7 +30,7 @@ public class MinimumLoss {
 
     static void insert(int price)
     {
-        if(root == null)
+        /*if(root == null)
         {
             root = new Node(price,null,null);
         }
@@ -47,7 +47,7 @@ public class MinimumLoss {
 
             }
         }
-
+*/
     }
 
     static Node find(int price,Node node)

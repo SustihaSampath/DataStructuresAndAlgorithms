@@ -12,18 +12,18 @@ public class BstAction {
 
         if(root == null)
         {
-            root = new Node(data,null,null,null);
+            root = new Node(data,null,null,null,0);
         }
         else
         {
             Node node = find(data,root);
             if(node.getData() > data)
             {
-               node.setLeft(new Node(data,node,null,null));
+               node.setLeft(new Node(data,node,null,null,0));
             }
             else
             {
-                node.setRight(new Node(data,node,null,null));
+                node.setRight(new Node(data,node,null,null,0));
             }
         }
     }
